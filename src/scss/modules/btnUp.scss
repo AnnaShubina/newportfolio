@@ -1,0 +1,28 @@
+.btnUp {
+    position: fixed;
+    bottom: 20px;
+    right: 5px;
+    display: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    svg {
+        circle {
+            fill: "none";
+        }
+
+        &:hover circle {
+            fill: #AFBEA1;
+        } 
+    }
+
+    @media screen and (min-width: 1200px) and (max-width: 1399px) {
+        right: 50px;
+    }
+
+    @media screen and (min-width: 1400px) {
+        right: 10%;
+    }
+}

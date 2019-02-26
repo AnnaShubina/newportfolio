@@ -1,0 +1,20 @@
+extends template/main
+
+block variables
+	- var title = 'Anna Chernova'
+
+block content
+	include modules/banner
+	include modules/portfolio
+	include modules/aboutme
+	.feedback
+		._wrap
+			._inner
+				include modules/order
+				include modules/contacts
+		._back
+			._order-back
+			._contacts-back
+	.btnUp
+		include ../img/svg/UP2.svg
+	

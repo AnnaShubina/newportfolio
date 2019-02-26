@@ -1,0 +1,129 @@
+.banner {
+    position: relative;
+
+    &__wrap {
+        @include wrapper();
+        @include xs(padding-right, 0);
+    }
+
+    &__inner {
+        @include row-flex();
+        justify-content: space-between;
+    }
+    
+    &__left {
+        @include col();
+        @include size(5);
+    }
+
+    &__right {
+        @include col();
+        @include size(5);  
+        @include size-xs(4);
+        height: 700px;
+        @include xs(height, 468px);
+        background: url(../img/picture/headerimg.jpg) no-repeat center center/cover;
+        @include sm(background-position-x, 20%);
+        transform: translateX(200%);
+        @include sm(transform, translateX(0));
+        transition-duration: 1s;
+    }
+
+    &__back {
+        position: absolute;
+        top: -100px;
+        @include sm(top, 0);
+        left: 0;
+        width: calc(50% + 10px);
+        @include xs(width, calc(60% + 22px));
+        background: url(../img/picture/headerbg.jpg) no-repeat center center/cover;
+        height: 900px;
+        @include sm(height, 700px);
+        @include xs(height, 468px);
+        z-index: -1;
+    }
+
+    &__title {
+        font-size: 24px;
+        text-transform: uppercase;
+        @include sm(font-size, 20px);
+        @include xs(font-size, 14px);
+    }
+
+    &__title--top {
+        margin-top: 294px;
+        @include sm(margin-top, 230px);
+        @include xs(margin-top, 142px);
+    }
+
+    &__description {
+        text-transform: uppercase;
+        font-size: 14px;
+        @include xs(font-size, 12px);
+        @include xs(text-transform, none);
+        @include xs(line-height, 1.5);
+        opacity: 0;
+        @include sm(opacity, 1);
+        transition-duration: 3s;
+    }
+
+    &__description--top {
+        margin-top: 18px;
+        @include xs(margin-top, 10px);
+    }
+
+    .button {
+        padding-top: 19px;
+        padding-bottom: 17px;
+        text-align: center;
+        font-size: 14px;
+        color: $white;
+        transition-duration: .6s;
+        transition-timing-function: ease-out;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $greenDark;
+            box-shadow: 0px 0px 10px rgba(175, 190, 161, 0.5);
+        }
+    }
+
+    .button--color {
+        background-color: $greenLight;
+    }
+
+    .button--size {
+        width: 255px;
+        @include xs(width, 210px);
+        @include xxs(width, 210px);
+        @include xxs(width, 80%);
+        @include xxs(border, 5px solid $white);
+        border: none;
+        border-radius: 31px;
+    }
+
+    .button--top {
+        margin-top: 195px;
+        margin-bottom: 200px;
+        @include xs(margin-top, 150px);
+        @include xs(margin-bottom, 0);
+        @include xxs(position, absolute);
+        @include xxs(margin, 0);
+        @include xxs(top, 363px);
+        @include xxs(left, 10%);
+        @include xxs(z-index, 10);
+    }
+
+    &__letterA {
+        position: absolute;
+        top: 234px;
+        @include xs(top, 108px);
+        left: calc(50% - 108px);
+        @include xs(left, calc(60% - 100px));
+        transform: scale(.4);
+        transition-duration: 1s;
+        @include sm(transform, scale(.8));
+        @include xs(transform, scale(.5));
+    }
+}
+

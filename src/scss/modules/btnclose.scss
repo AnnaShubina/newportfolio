@@ -1,0 +1,46 @@
+.btn-close {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+
+    &__leftright{
+        height: 1px;
+        width: 15px;
+        position: absolute;
+        top: 50%;
+        left: 17.5px;
+        background-color: $black;
+        border-radius: 2px;
+        transform: rotate(45deg);
+        transition: all .3s ease-in;
+      }
+      
+      &__rightleft{
+        height: 1px;
+        width: 15px;
+        position: absolute;
+        top: 50%;
+        left: 17.5px;
+        background-color: $black;
+        border-radius: 2px;
+        transform: rotate(-45deg);
+        transition: all .3s ease-in;
+      }
+
+      &:hover &__leftright{
+        transform: rotate(-45deg);
+      }
+
+      &:hover &__rightleft{
+        transform: rotate(45deg);
+      }
+
+      &--pos {
+          position: absolute;
+          top: 15px;
+          @include xs(top, 10px);
+          right: 10px;
+      }
+}

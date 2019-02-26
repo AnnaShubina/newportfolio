@@ -1,0 +1,30 @@
+header.header
+    ._wrap
+        ._inner
+            nav.main-nav.-mobile
+                button._sandwich 
+                    include ../../img/svg/menu.svg
+                ._background 
+                ul._list.-pos
+                    li._item: a(href="#portfolio") Portfolio
+                    li._item: a(href="#about") About&nbsp;me
+                    li._item: a(href="#order") Order
+                    li._item: a(href="#contacts") Contact
+            +logo()
+            .lang-wrap
+                .lang.-text
+                    a._en.active(href="#") en
+                    span &nbsp;&#8260;&nbsp;
+                    a._ru(href="index.html") ru
+                nav.main-nav.-comp
+                    button._sandwich 
+                        include ../../img/svg/menu.svg 
+                    ._listwrap
+                        ul._list.-pos
+                            li._item: a(href="#portfolio") Portfolio
+                            li._item: a(href="#about") About&nbsp;me
+                            li._item: a(href="#order") Order
+                            li._item: a(href="#contacts") Contact
+
+                
+        

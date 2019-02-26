@@ -1,0 +1,116 @@
+.about {
+    margin-top: 35px;
+    @include xs(padding-top, 35px);
+    @include xs(margin-top, 0);
+
+    &__wrap {
+        @include wrapper();
+    }
+
+    &__inner {
+        @include row-flex();
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    &__description {
+        @include col();
+        @include size(4);
+        @include size-xs(10);
+    }
+
+    &__header--top {
+        text-transform: uppercase;
+        margin-top: 40px;
+        @include xs(margin-top, 0);
+    }
+
+    &__text {
+        padding: 50px 0 55px 0;
+        line-height: 1.5;
+        @include xs(padding, 25px 0 40px 0);
+        @include xxs(font-size, 12px);
+    }
+
+    &__picture {
+        @include col();
+        @include size(5);
+        @include xs(display, none);
+        background: url(../img/picture/aboutme.jpg) no-repeat center center/cover;
+        height: 700px;
+        transform: translateX(200%);
+        @include sm(transform, translateX(0));
+        transition-duration: 1s;
+    }
+
+    &__picture-mobile {
+        display: none;
+        width: calc(100% - 20px);
+        @include xs(display, block);
+        @include xs(margin-bottom, 40px);
+        position: relative;
+    }
+
+    &__img-mobile {
+        background: url(../img/picture/aboutme2.jpg) no-repeat center center/cover;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: -15px;
+        background-position-y: 70%;
+    }
+
+    &__letterC {
+        width: 220px;
+        height: 289px;
+        position: absolute;
+        top: calc(50% - 135px);
+        left: calc(50% - 100px);
+        @include xs(display, none);
+        transform: scale(.4);
+        transition-duration: 1s;
+        @include sm(transform, scale(1));
+    }
+
+    &__letterC-mobile {
+        width: 220px;
+        height: 289px;
+        position: absolute;
+        top: calc(50% - 110px);
+        right: -110px;
+        @include xxs(top, calc(50% - 115px));
+    }
+}
+
+.tools {
+    li {
+        padding-top: 10px;
+        @include xxs(font-size, 12px);
+    }
+}
+
+.tools--top {
+    margin-top: 40px;
+    @include xs(margin-top, 25px);
+}
+
+.tools__img {
+    img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+.tools__img--top {
+    margin-top: 30px;
+    @include xs(margin-top, 40px);
+}
+
+.tools__img--right {
+    img {
+        margin-right: 20px;
+        @include md(margin-right, 10px);
+    }
+}

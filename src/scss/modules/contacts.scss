@@ -1,0 +1,58 @@
+.contacts {
+    @include col();
+    @include size(4);
+    @include size-xs(10);
+    @include shift-left(1);
+    @include xs(margin-left, 10px);
+    position: relative;
+
+    h2 {
+        text-transform: uppercase;
+    }
+
+    &__header--top {
+        @include xs(margin-top, 50px);
+    }
+
+    .info {
+        img {
+            width: 15px;
+            height: 15px;
+            margin-right: 10px;
+        }
+
+        &__name--top {
+            margin-top: 76px;
+            @include xs(margin-top, 40px);
+        }
+    
+        &__phone--top,
+        &__email--top {
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+        }    
+    }
+
+    .logo {
+        display: none;
+        @include xs(display, block);
+        width: 40px;
+        height: 40px;
+        margin-top: 35px;
+        margin-bottom: 30px;
+    }
+
+    &__back-mobile {
+        display: none;
+        @include xs(display, block);
+        position: absolute;
+        top: 0;
+        left: -15px;
+        width: calc(100% + 30px);
+        height: 100%;
+        z-index: -1;
+        background: url(../img/picture/contactsbg.jpg) no-repeat center center/cover;
+        @include xs(background-position-x, 80px);
+    }
+}

@@ -1,0 +1,29 @@
+@mixin portfolioBack{
+    width: 122.85%;
+    height: 161.87%; 
+    top: -68px;
+    padding: 31px 5px 0 63px;
+    @include xxs(padding, 25px 5px 0 46px);
+
+    @media screen and (max-width: $break_xxs) {
+        width: unset;
+        height: unset;
+    }
+}
+
+@mixin logo{
+    @include col();
+    @include size(5);
+    transition-duration: 1s;
+
+    .logo {
+        width: 40px;
+        height: 40px;
+        @include sm(margin, 0 auto);
+
+        circle {
+            transform-origin: 50% 50%;
+            transition: .6s;
+        }
+    }
+}

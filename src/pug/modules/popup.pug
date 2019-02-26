@@ -1,0 +1,24 @@
+.popup
+    ._overlay
+    ._content
+        ._header Order a project
+        form.form(id="form2")
+            ._reply
+            div
+                input(type="text" id="name-popup"  required name="name" placeholder="Your Name")
+                label(for="name-popup") Your name
+            div
+                input(type="tel" id="phone-popup"  required name="phone" placeholder="Phone")
+                label(for="phone-popup") Phone
+            div
+                input(type="email" id="email-popup"  required name="email" placeholder="Email")
+                label(for="email-popup") Email
+            div
+                textarea(name="message", cols="30", rows="10" id="message-popup" placeholder="Task description...")
+                label(for="message-popup") Task description...
+            div._check.-top
+                input._popup-checkbox(type="checkbox", name="accept" id="accept-popup")
+                label(for="accept-popup") I hereby agree to the Terms of processing of my personal data.
+            div._btn
+                input._submit.-top.-width(type="submit" id="submit-popup" name="submit" value="Sent a form" disabled)
+        include btnClose

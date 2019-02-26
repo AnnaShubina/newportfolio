@@ -1,0 +1,25 @@
+section.order
+    h2._header.-top(id="order") Order a project
+    .form.-top
+        p._header Get in touch!
+        p._text.-top Do you want to get started with your project and you need my help, feel free to contact me
+        form(id="form1")
+            ._reply
+            div
+                input(type="text" id="name"  required name="name" placeholder="Your Name")
+                label(for="name") Your name
+            div
+                input(type="tel" id="phone"  required name="phone" placeholder="Phone")
+                label(for="phone") Phone
+            div
+                input(type="email" id="email"  required name="email" placeholder="Email")
+                label(for="email") Email
+            div
+                textarea(name="message", cols="30", rows="10" id="message" placeholder="Task description...")
+                label(for="message") Task description...
+            div._check
+                input._order-checkbox(type="checkbox", name="accept" id="accept")
+                label(for="accept") I hereby agree to the Terms of processing of my personal data.
+            div._btn
+                input._submit.-top.-width(type="submit" id="submit" name="submit" value="Sent a form" disabled)
+    ._back-mobile

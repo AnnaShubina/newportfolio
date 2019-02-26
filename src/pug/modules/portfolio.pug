@@ -1,0 +1,26 @@
+section.portfolio   
+    ._wrap
+        ._top
+            ._description   
+                h2(id="portfolio") My works
+                span Click for watching the site
+            ul._menu
+                li._tab.active(data-filter="all"): a(href="#") all
+                li &#8260;
+                li._tab(data-filter=".js"): a(href="#") js (jQuery)
+                li &#8260;
+                li._tab(data-filter=".bem"): a(href="#") bem
+                li &#8260;
+                li._tab(data-filter=".adapt"): a(href="#") adaptive
+        ._gallery.-top
+            +galleryItem('http://servisrent.ru', 'img/works/01.png', 'HTML coding plus wordpress', 'js', 'adapt')
+            +galleryItem('http://tehno-rc.ru', 'img/works/02.png', 'HTML coding plus prestashop', 'js', 'adapt')
+            +galleryItem('medical/index.html', 'img/works/03.png', 'HTML coding free psd template', 'adapt')
+            +galleryItem('mogo/index.html', 'img/works/04.png', 'HTML coding free psd template', 'js', 'adapt')
+            +galleryItem('lian/index.html', 'img/works/05.png', 'HTML coding free psd template', 'bem', 'adapt')
+            +galleryItem('mairala/index.html', 'img/works/06.png', 'HTML coding free psd template', 'js', 'adapt')
+            +galleryItem('concom/index.html', 'img/works/07.png', 'HTML coding free psd template', 'bem', 'adapt')
+            +galleryItem('surf/index.html', 'img/works/08.png', 'HTML coding free psd template', 'adapt')
+        ._show-wrap.-bottom
+            button._show-btn.-width Show more
+        

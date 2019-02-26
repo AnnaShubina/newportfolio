@@ -1,0 +1,26 @@
+mixin galleryItem(href, src, descr, filter1, filter2)
+	a.portfolio__gallery-item(href=href class=filter1 class=filter2 target='_blank')
+		img.portfolio__gallery-img(src=src data-tilt='' alt='website img')
+		.portfolio__gallery-back
+			p.portfolio__gallery-description= descr
+		span.portfolio__gallery-number 01
+
+
+mixin info()
+	.info
+		p._name.-top Anna Chernova
+		if block
+			block
+		else
+			p._phone.-top
+				img(src="img/svg/phone-call.svg", alt="phone")
+				span + 7 925 158-75-83
+			p._email.-top
+				img(src="img/svg/envelope.svg", alt="email")
+				span ashubina0810@mail.ru
+
+
+mixin logo()
+	.logo-wrap
+		.logo
+			include ../../img/svg/logo.svg

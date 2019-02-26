@@ -1,0 +1,204 @@
+.order {
+    @include col();
+    @include size(4);
+    @include size-md(5);
+    @include size-xs(10);
+    padding-right: 50px;
+    @include sm(padding-right, 5px);
+    @include xs(padding-right, 0);
+    position: relative;
+
+    h2 {
+        text-transform: uppercase;
+    }
+
+    &__header--top {
+        @include xs(margin-top, 50px);
+    }
+
+    .form {
+        &__reply {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 15px 5px;
+            margin-bottom: 2px;
+            color: $greenMedium;
+            text-align: center;
+        }
+
+        input {
+            border: none;
+            outline: none;
+            border-bottom: 1px solid #2C3821; 
+            background-color: transparent;
+            font-size: 12px;
+    
+            &:focus {
+                outline: 2px solid $greenLight;
+                box-shadow: 0px 0px 10px rgba(175, 190, 161, 0.5);
+            }
+        }
+    
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"] {
+            border-radius: 0;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 15px 5px;
+            margin-bottom: 2px;
+    
+            & + label {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                margin: -1px;
+                padding: 0;
+                border: 0;
+                clip: rect(0,0,0,0);
+                clip-path: inset(100%);
+                overflow: hidden;
+            }
+        }
+    
+    
+        input[type="checkbox"] {
+            opacity: 0;
+        }
+    
+        &__check {
+            margin-top: 30px;
+            @include xs(margin-top, 20px);
+            position: relative;
+        }
+    
+        input[type="submit"] {
+            background: $greenLight;
+            border: none;
+            color: $black;
+            font-size: 14px;
+            transition-duration: .6s;
+            transition-timing-function: ease-out;
+    
+            &:hover {
+                cursor: pointer;
+                background-color: $greenDark;
+                box-shadow: 0px 0px 10px rgba(175, 190, 161, 0.5);
+                color: $white;
+            }
+        }
+    
+        input[type="submit"]:disabled {
+            background: #BCBDBA;
+            border: none;
+            color: rgba(0, 0, 0, 0.4);
+            font-size: 14px;
+        }
+    
+        textarea {
+            margin-top: 40px;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+            height: 142px;
+            box-sizing: border-box;
+            border: 1px solid #2C3821;
+            border-radius: 10px;
+            background-color: transparent;
+    
+            & + label {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                margin: -1px;
+                padding: 0;
+                border: 0;
+                clip: rect(0,0,0,0);
+                clip-path: inset(100%);
+                overflow: hidden;
+            }
+    
+            &:focus {
+                outline: 2px solid $greenLight;
+                box-shadow: 0px 0px 10px rgba(175, 190, 161, 0.5);
+            }
+        }
+    
+        div {
+            position: relative;
+        }
+
+        label[for="accept"] {
+            position: absolute;
+            top: 0;
+            left: 30px;
+            cursor: pointer;
+            @include xs(font-size, 12px);
+    
+            &::before {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                left: -30px;
+                width: 10px;
+                height: 10px;
+                border: 1px solid #000000;
+                border-radius: 50%;
+            }
+        }
+        
+        &__header {
+            font-size: 24px;
+            text-transform: uppercase;
+            @include xs(display, none);
+        }
+    
+        &__text--top {
+            margin-top: 40px;
+            @include xs(margin-top, 25px);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        &__submit--top {
+            margin-top: 77px;
+            margin-bottom: 138px;
+            @include xs(margin-bottom, 40px);
+            @include xs(margin-top, 57px);
+        }
+    
+        &__submit--width {
+            width: 200px;
+            height: 50px;
+            border-radius: 31px;
+            @include xxs(width, 100%);
+        }
+    
+        &__btn {
+            @include xs(text-align, center);
+        }
+    }
+    
+    .form--top {
+        margin-top: 76px;
+        @include xs(margin-top, 25px);
+    }
+
+    input[type="checkbox"]:checked + label[for="accept"]::before {
+        background-color: $greenMedium;
+    }
+
+    &__back-mobile {
+        display: none;
+        @include xs(display, block);
+        position: absolute;
+        top: 0;
+        left: -15px;
+        width: calc(100% + 30px);
+        height: 100%;
+        z-index: -1;
+        background: url(../img/picture/orderbg.jpg) no-repeat center center/cover;
+    }
+}
+

@@ -101,6 +101,7 @@
             box-sizing: border-box;
             padding: 20px;
             height: 142px;
+            font-size: 12px;
             box-sizing: border-box;
             border: 1px solid #2C3821;
             border-radius: 10px;
@@ -132,8 +133,8 @@
             position: absolute;
             top: 0;
             left: 30px;
+            font-size: 10px;
             cursor: pointer;
-            @include xs(font-size, 12px);
     
             &::before {
                 content: '';
